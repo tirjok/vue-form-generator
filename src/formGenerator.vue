@@ -1,14 +1,12 @@
 <template lang="pug">
-div
-	fieldset.vue-form-generator(v-if='schema != null')
+	div.vue-form-generator(v-if='schema != null')
 		template(v-for='field in fields')
 			.field(v-if='fieldVisible(field)', :class='getFieldRowClasses(field)')
-				label
+				label.label
 					| {{ field.label }}
 					p.help(v-if='field.help')
 						i.icon
 						.helpText(v-html='field.help')
-				.control
 					component(:is='getFieldType(field)', :disabled='fieldDisabled(field)', :model='model', :schema.sync='field', @model-updated='modelUpdated', @validated="onFieldValidated")
 					.buttons(v-if='buttonVisibility(field)')
 						button(v-for='btn in field.buttons', @click='btn.onclick(model, field)', :class='btn.classes') {{ btn.label }}
