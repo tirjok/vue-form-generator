@@ -1,6 +1,6 @@
 <template lang="pug">
-.wrapper
-	input.form-control(
+.control
+	input.input(
 		:type="schema.inputType", 
 		:value="value",
 		@input="value = $event.target.value",
@@ -32,7 +32,7 @@
 		:step="schema.step",
 		:width="schema.width",
 		:files="schema.files")
-	span.helper(v-if="schema.inputType === 'color' || schema.inputType === 'range'") {{ value }}
+	p.help(v-if="schema.inputType === 'color' || schema.inputType === 'range'") {{ value }}
 </template>
 
 <script>
