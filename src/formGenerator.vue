@@ -2,13 +2,13 @@
 div
 	fieldset.vue-form-generator(v-if='schema != null')
 		template(v-for='field in fields')
-			.form-group(v-if='fieldVisible(field)', :class='getFieldRowClasses(field)')
+			.field(v-if='fieldVisible(field)', :class='getFieldRowClasses(field)')
 				label
 					| {{ field.label }}
-					span.help(v-if='field.help')
+					p.help(v-if='field.help')
 						i.icon
 						.helpText(v-html='field.help')
-				.field-wrap
+				.control
 					component(:is='getFieldType(field)', :disabled='fieldDisabled(field)', :model='model', :schema.sync='field', @model-updated='modelUpdated', @validated="onFieldValidated")
 					.buttons(v-if='buttonVisibility(field)')
 						button(v-for='btn in field.buttons', @click='btn.onclick(model, field)', :class='btn.classes') {{ btn.label }}
