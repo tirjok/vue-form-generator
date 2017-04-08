@@ -1,7 +1,7 @@
 <template lang="pug">
 	div.vue-form-generator(v-if='schema != null')
 		template(v-for='field in fields')
-			.block(v-if='fieldVisible(field)', :class='getFieldRowClasses(field)')
+			.control(v-if='fieldVisible(field)', :class='getFieldRowClasses(field)')
 				label.label
 					| {{ field.label }}
 				component(:is='getFieldType(field)', :disabled='fieldDisabled(field)', :model='model', :schema.sync='field', @model-updated='modelUpdated', @validated="onFieldValidated")

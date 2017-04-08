@@ -32,7 +32,7 @@
 		:step="schema.step",
 		:width="schema.width",
 		:files="schema.files")
-	p.help(v-if="schema.inputType === 'color' || schema.inputType === 'range'") {{ value }}
+	span.help.is-info(v-if="schema.inputType === 'color' || schema.inputType === 'range'") {{ value }}
 </template>
 
 <script>
