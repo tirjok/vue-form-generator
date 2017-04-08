@@ -1,7 +1,7 @@
 <template lang="pug">
 	div.vue-form-generator(v-if='schema != null')
 		template(v-for='field in fields')
-			.field(v-if='fieldVisible(field)', :class='getFieldRowClasses(field)')
+			.control(v-if='fieldVisible(field)', :class='getFieldRowClasses(field)')
 				label.label
 					| {{ field.label }}
 					p.help(v-if='field.help')
