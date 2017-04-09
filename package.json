@@ -1,7 +1,7 @@
 {
   "name": "vue-form-generator",
-  "version": "2.0.1-beta8",
-  "description": "A schema-based form generator component for Vue.js",
+  "version": "2.0.1-beta9",
+  "description": "A schema-based form generator component for Vue.js with Bulma CSS",
   "homepage": "https://github.com/tirjok/vue-form-generator",
   "main": "dist/vfg.js",
   "scripts": {
@@ -24,6 +24,7 @@
   "keywords": [
     "vue",
     "vuejs",
+    "bulma",
     "form",
     "generator",
     "schema",
@@ -31,7 +32,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/icebob/vue-form-generator.git"
+    "url": "https://github.com/tirjok/vue-form-generator.git"
   },
   "files": [
     "dist/vfg.js",
@@ -40,7 +41,7 @@
     "dist/vfg-core.css",
     "src"
   ],
-  "author": "Icebob",
+  "author": "tirjok",
   "license": "MIT",
   "devDependencies": {
     "babel-core": "6.23.1",
